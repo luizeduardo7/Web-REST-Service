@@ -15,10 +15,10 @@ exports.findTask = function(req, res){
     });
 }
 
+incremento = 0;
 exports.addTask = function(req, res){
-
     let task = new Task({
-        id: req.body.id,
+        id: incremento++,
         descricao: req.body.descricao,
         prazo: req.body.prazo,
         completa: req.body.completa
